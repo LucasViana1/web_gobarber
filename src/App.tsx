@@ -1,12 +1,18 @@
 import React from 'react';
 
 import GlobalStyle from './styles/global';
-import Signin from './pages/Signin';
+import SignIn from './pages/SignIn';
+// import SignUp from './pages/SignUp';
+
+import { AuthProvider } from './context/AuthContext';
 
 const App: React.FC = () => {
   return (
     <>
-      <Signin />
+      <AuthProvider>
+        <SignIn />
+      </AuthProvider>
+
       <GlobalStyle />
     </>
   );
